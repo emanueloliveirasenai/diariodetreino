@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Diário de Treinos</title>
+  <link rel="stylesheet" href="css/config.css">
+</head>
+<body>
+  <header>📋 Meu Diário de Treinos</header>
+
+  <main>
+    <!-- Cadastro de Exercícios -->
+    <h2>Cadastro de Exercícios por Treino</h2>
+    <form id="formCadastroExercicio" autocomplete="off">
+      <select id="tipoTreinoCadastro" required>
+        <option value="">Selecione o treino</option>
+        <option value="A">Treino A</option>
+        <option value="B">Treino B</option>
+        <option value="C">Treino C</option>
+        <option value="D">Treino D</option>
+        <option value="E">Treino E</option>
+      </select>
+      <input type="text" id="nomeExercicio" placeholder="Nome do exercício" required>
+      <button type="submit" class="add">Adicionar Exercício</button>
+    </form>
+
+    <!-- Registrar Treino Diário -->
+    <h2>Registrar Treino Diário</h2>
+    <form id="formRegistrarTreino" autocomplete="off">
+      <select id="tipoTreinoRegistro" required>
+        <option value="">Selecione o treino</option>
+        <option value="A">Treino A</option>
+        <option value="B">Treino B</option>
+        <option value="C">Treino C</option>
+        <option value="D">Treino D</option>
+        <option value="E">Treino E</option>
+      </select>
+      <input type="text" id="pesquisaExercicio" placeholder="Pesquisar exercício...">
+      <select id="exercicioSelect" required>
+        <option value="">Selecione o exercício</option>
+      </select>
+      <input type="number" id="series" placeholder="Séries" min="1" required>
+      <input type="number" id="repeticoes" placeholder="Repetições" min="1" required>
+      <input type="number" id="carga" placeholder="Carga (kg)" min="0" step="0.5" required>
+      <button type="submit" class="add">Registrar Treino</button>
+    </form>
+
+    <!-- Tabela de Exercícios Registrados -->
+    <h2>Meus Exercícios Registrados</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Treino</th>
+          <th>Exercício</th>
+          <th>Séries</th>
+          <th>Repetições</th>
+          <th>Carga (kg)</th>
+          <th>Ações</th>
+        </tr>
+      </thead>
+      <tbody id="tabelaTreinos"></tbody>
+    </table>
+
+    <!-- Cronômetro de Descanso -->
+    <h2>Cronômetro de Descanso</h2>
+    <div id="cronometroContainer">
+      <label>Minutos: <input type="number" id="minutos" min="0" value="1"></label>
+      <label>Segundos: <input type="number" id="segundos" min="0" max="59" value="0"></label>
+      <div id="displayCronometro">01:00</div>
+      <button id="startCronometro">Iniciar</button>
+      <button id="pauseCronometro">Pausar</button>
+      <button id="resetCronometro">Resetar</button>
+    </div>
+  </main>
+
+  <script src="js/validaproc.js"></script>
+</body>
+</html>

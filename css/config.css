@@ -1,0 +1,159 @@
+/* ===== Estilo Global ===== */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0 10px;
+  background: #121212;   /* fundo escuro */
+  color: #10b981;        /* verde padrão */
+}
+
+header {
+  text-align: center;
+  font-size: 28px;
+  margin: 20px 0;
+  color: #10b981;
+}
+
+h2 {
+  color: #10b981;
+  margin-top: 20px;
+}
+
+/* ===== Formulários ===== */
+form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+form input, form select {
+  padding: 8px;
+  border-radius: 6px;
+  border: 1px solid #10b981; /* contorno verde */
+  background: #1f2937;        /* fundo escuro para inputs */
+  color: #10b981;
+  font-size: 16px;
+}
+
+form input::placeholder {
+  color: #6ee7b7; /* placeholder verde claro */
+}
+
+form button.add {
+  background: #10b981;        /* verde do botão */
+  color: #121212;             /* texto escuro para contraste */
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+form button.add:hover {
+  background: #059669;        /* verde mais escuro no hover */
+  transform: scale(1.05);
+}
+
+/* ===== Tabela de Treinos ===== */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+  background: #1f2937; /* fundo escuro para tabela */
+  color: #10b981;
+}
+
+table, th, td {
+  border: 1px solid #10b981;
+}
+
+th, td {
+  padding: 10px;
+  text-align: center;
+}
+
+/* ===== Cores por tipo de treino ===== */
+.treino-A { background: #065f46; color: #a7f3d0; } /* verde escuro */
+.treino-B { background: #1e3a8a; color: #93c5fd; } /* azul */
+.treino-C { background: #5b21b6; color: #d8b4fe; } /* roxo */
+.treino-D { background: #b45309; color: #fed7aa; } /* laranja */
+.treino-E { background: #b91c1c; color: #fecaca; } /* vermelho */
+
+/* Botões editar/excluir */
+button.editar, button.excluir {
+  padding: 5px 10px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  color: #fff;
+}
+
+button.editar { background: #10b981; }
+button.editar:hover { background: #059669; transform: scale(1.05); }
+button.excluir { background: #ef4444; }
+button.excluir:hover { background: #b91c1c; transform: scale(1.05); }
+
+/* ===== Cronômetro Estilizado ===== */
+#cronometroContainer {
+  margin: 30px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  padding: 20px;
+  background: #1f2937;
+  border-radius: 15px;
+  width: 90%;
+  max-width: 400px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+#cronometroContainer input {
+  width: 70px;
+  padding: 5px;
+  text-align: center;
+  font-size: 18px;
+  border-radius: 8px;
+  border: 1px solid #10b981;
+  background: #121212;
+  color: #10b981;
+}
+
+#displayCronometro {
+  font-size: 60px;
+  font-weight: bold;
+  color: #10b981;
+  margin-top: 10px;
+}
+
+#displayCronometro.finalizando {
+  color: #f87171;
+  animation: piscar 0.5s infinite alternate;
+}
+
+@keyframes piscar {
+  from { opacity: 1; }
+  to { opacity: 0.3; }
+}
+
+#cronometroContainer button {
+  background: #10b981;
+  color: #121212;
+  padding: 10px 20px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  transition: all 0.2s;
+}
+
+#cronometroContainer button:hover {
+  background: #059669;
+  transform: scale(1.05);
+}
+
+/* ===== Responsivo para celular ===== */
+@media (max-width: 500px) {
+  #displayCronometro { font-size: 48px; }
+  #cronometroContainer input { width: 60px; font-size: 16px; }
+  #cronometroContainer button { font-size: 16px; padding: 8px 15px; }
+}
