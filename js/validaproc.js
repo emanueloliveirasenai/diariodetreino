@@ -1,5 +1,4 @@
 document.addEventListener("DOMContentLoaded", () => {
-  // ===== Elementos e variáveis =====
   const formCadastroExercicio = document.getElementById("formCadastroExercicio");
   const tipoTreinoCadastro = document.getElementById("tipoTreinoCadastro");
   const nomeExercicio = document.getElementById("nomeExercicio");
