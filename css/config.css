@@ -157,3 +157,52 @@ button.excluir:hover { background: #b91c1c; transform: scale(1.05); }
   #cronometroContainer input { width: 60px; font-size: 16px; }
   #cronometroContainer button { font-size: 16px; padding: 8px 15px; }
 }
+/* ===== Responsivo para celular ===== */
+@media (max-width: 600px) {
+
+  body {
+    padding: 0 5px;
+  }
+
+  form {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  form input, form select, form button {
+    width: 100%;
+    font-size: 16px;
+    padding: 10px;
+  }
+
+  table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+
+  th, td {
+    padding: 8px;
+    font-size: 14px;
+  }
+
+  #cronometroContainer {
+    width: 100%;
+    padding: 15px;
+  }
+
+  #displayCronometro {
+    font-size: 48px;
+  }
+
+  #cronometroContainer input {
+    width: 60px;
+    font-size: 16px;
+  }
+
+  #cronometroContainer button {
+    width: 100%;
+    font-size: 16px;
+    padding: 10px;
+  }
+}
